@@ -1,8 +1,8 @@
 #include <stdlib.h>
 #include <string.h>
-#include "manage_input.h"
+#include "ManageInput.h"
 
-void identify_grep_options(int argc, char *argv[], struct Grep_choise *choises)
+void identify_grep_options(int argc, char *argv[], struct my_grep *choises)
 {
     int index = 1;
     int input_from_file = 0;

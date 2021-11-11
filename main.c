@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include "MyGrep.h"
-#include "manage_input.h"
-#include "find_match_in_line.h"
+#include "ManageInput.h"
+#include "FindMatchInLine.h"
 
 #define _GNU_SOURCE
 int main(int argc, char *argv[]) {
@@ -12,7 +12,7 @@ int main(int argc, char *argv[]) {
     char *phrase_to_search = argv[1];
     char *file_name = argv[2];
     //my_grep(phrase_to_search, file_name);
-    struct Grep_choise choises= {0,0,0,0,0,0,0,0,0};
+    struct my_grep choises= {0,0,0,0,0,0,0,0,0};
     //keep all user choises. if choise=1 the option was chosen
     identify_grep_options(argc, argv, &choises); //will get us all aoptions
     printf("%d, %d, %d \n", choises.i , choises.b, choises.c);

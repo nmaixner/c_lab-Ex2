@@ -1,10 +1,12 @@
-#include "manage_input.h"
-#include "find_match_in_line.h"
 #include <stdio.h>
 #include <ctype.h>
 #include <stdbool.h>
 #include <stdlib.h>
 #include <string.h>
+
+#include "ManageInput.h"
+#include "FindMatchInLine.h"
+
 int check_if_phrase_is_in_line(const char *phrase_to_search, const char *line)
 { //check regular phrase
     int line_index = 0;
@@ -21,7 +23,7 @@ int check_if_phrase_is_in_line(const char *phrase_to_search, const char *line)
     }
     return 0;
 }
-int check_if_match_line(const char *phrase_to_search, const char *line, const Grep_choise choises)
+int check_if_match_line(const char *phrase_to_search, const char *line, const my_grep choises)
 { //will check match with flags
     int match_in_file= NO_MATCHED;
     //creating copy of the line to make changes accoring to flags, withouut harming the line:

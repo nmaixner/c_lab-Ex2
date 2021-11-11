@@ -32,7 +32,7 @@ void my_grep(const char *phrase_to_search, const char *file_name)
         printf("File '%s' did not open- Exit The Program.\n", file_name);
         exit(-1);
     }
-
+    
     while (getline(&line_in_file, &line_size, file_ptr) != EOF) {
        phrase_is_in_line = check_if_phrase_is_in_line(phrase_to_search, str);
         if (phrase_is_in_line) {
