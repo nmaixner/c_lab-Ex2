@@ -17,6 +17,7 @@ typedef struct my_grep {
 	bool special_signs; // True if -E
 } my_grep; void
 
-identify_grep_options(int argc, char *argv[], struct my_grep *choises);
+my_grep* identify_grep_options(my_grep* my_grep_parameters);
+my_grep* initial_grep_parameters();
 
 #endif // !MANAGE_INPUT_H
