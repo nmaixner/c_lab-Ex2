@@ -3,7 +3,7 @@
 
 #include <stdbool.h>
 
-typedef struct my_grep {
+typedef struct myGrep {
 	char* phrase;
 	char* file_name;
 	bool print_line_after; // True if -A
@@ -15,7 +15,7 @@ typedef struct my_grep {
 	bool print_if_not_in_line; // True if -v
 	bool print_exclusive; // True if -x
 	bool special_signs; // True if -E
-} my_grep; void
+}my_grep;
 
 my_grep* identify_grep_options(my_grep* my_grep_parameters);
 my_grep* initial_grep_parameters();
